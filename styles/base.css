@@ -1,7 +1,8 @@
+
 /*Variable*/
 :root {
-    --heading-font: "Times New Roman", "Georgia", serif;
-    --body-font: Arial, Helvetica, sans-serif;
+    --heading-font: 'Roboto',"Times New Roman", "Georgia", serif;
+    --body-font: 'Roboto', Arial, Helvetica, sans-serif;
     --color1: #050505;
     --color2: #f8fafc;
     --color3: #173348;
