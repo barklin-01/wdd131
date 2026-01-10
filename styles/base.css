@@ -1,15 +1,27 @@
 
 /*Variable*/
 :root {
-    --heading-font: 'Roboto',"Times New Roman", "Georgia", serif;
+    --heading-font: 'Roboto', "Times New Roman", "Georgia", serif;
     --body-font: 'Roboto', Arial, Helvetica, sans-serif;
     --color1: #050505;
     --color2: #f8fafc;
     --color3: #173348;
     --color4: #292b2df4;
-
 }
 
+/*body*/
+body {
+    font-family: var(--body-font);
+    color: var(--color1);
+    background-color: var(--color2);
+}
+
+/*Encabezados*/
+h1,
+h2,
+h3 {
+    font-family: var(--heading-font);
+}
 /*reset general*/
 *,
 *::after,
@@ -66,7 +78,12 @@ nav ul li a {
     font-weight: bold;
     font-size: 1rem;
 }
+nav ul li a:hover {
+    color: #ffcc00;
+    text-decoration: underline;
+    transition: 0.3s;
 
+}
 /*Main*/
 h1 {
     grid-column: 1 / -1;
