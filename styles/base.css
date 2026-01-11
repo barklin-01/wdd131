@@ -40,13 +40,6 @@ footer {
     margin: 0 auto;
 }
 
-/*body*/
-body {
-    font-family: var(--body-font);
-    color: var(--color1);
-    background-color: var(--color2);
-}
-
 /*Encabezado*/
 header {
     display: grid;
