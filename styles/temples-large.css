@@ -1,0 +1,49 @@
+@media screen and (min-width: 1024px) {
+
+    /* Header */
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 40px;
+    }
+
+    #name-page {
+        font-size: 2.5rem;
+        margin: 0;
+    }
+
+    /* Menú horizontal */
+    nav {
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: row;
+        justify-content: flex-end;
+        gap: 2rem;
+        margin: 0;
+    }
+
+    #menu-button {
+        display: none;
+    }
+
+    /* Grid de imágenes */
+    .picture {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .picture img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        transition: transform 0.3s ease-in-out;
+    }
+    /* Efecto hover */
+    .picture img:hover {
+        transform: scale(1.05);
+    }
+}

@@ -10,62 +10,80 @@
 /*Ancho de la pagina*/
 header,
 footer {
-    max-width: 100%;
     width: 100%;
-    margin: 0 auto;
+    padding: 10px;
+    text-align: center;
 }
 main {
     max-width: 800px;
     margin: 0 auto; 
+    padding: 10px;
 }
 /*body*/
 
 /*Encabezado*/
 header{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    background-color: rgb(165, 66, 33);
-    height: auto;
-    padding: 10px 10px;
-}
-header ul  {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    list-style: none;
-    justify-content: space-around;
-    font-size: 2rem;
-}
-nav ul li a {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgb(165, 66, 33);
+}
+/*Ocultar temple*/
+header.menu-open #name-page {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+}
+/*X ala derecha*/
+
+/*links*/
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0.3rem 0;
+}
+
+nav ul li a {
     text-decoration: none;
-    justify-content: center;
     color: #fff;
-    
+    font-size: 1.2rem;
+    font-weight: bold;
+
+
 }
 #name-page{
-    font-size: 2.5rem;
+    font-size: 1.8rem;
+    font-weight: bold;
     color: #fff;
+    margin-bottom: 0.5rem;
 }
 
 /*Main*/
 h1{
     text-align: center;
     font-size: 2rem;
-    margin: 20px;
+    margin: 20px 0;
 }
 
 .picture{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-gap: 25px;
+    grid-template-columns: 1fr;
+    gap: 20px;
     place-items: center;
 }
-img{
+.picture img{
     width: 100%;
-    height: 200px;
+    height: auto;
     margin: 0.5rem;
     object-fit: cover;
+    border-radius: 4px;
 }
 .picture figure{
     text-align: center;
@@ -83,3 +101,25 @@ footer {
 #lastModified {
     color: #fff;
 }
+/*menu-button*/
+#menu-button{
+    background-color: rgb(165, 66, 33);
+    border: none;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+
+}
+     /*oculto*/
+nav{
+    display: none;
+    width: 100%;
+}
+      /*visible*/
+nav.open {
+    display: block;
+    margin-top: 10px;
+}
+
