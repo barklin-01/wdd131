@@ -1,0 +1,85 @@
+/*reset general*/
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Ancho de la pagina*/
+header,
+footer {
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+}
+main {
+    max-width: 800px;
+    margin: 0 auto; 
+}
+/*body*/
+
+/*Encabezado*/
+header{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    background-color: rgb(165, 66, 33);
+    height: auto;
+    padding: 10px 10px;
+}
+header ul  {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    list-style: none;
+    justify-content: space-around;
+    font-size: 2rem;
+}
+nav ul li a {
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+    color: #fff;
+    
+}
+#name-page{
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+/*Main*/
+h1{
+    text-align: center;
+    font-size: 2rem;
+    margin: 20px;
+}
+
+.picture{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 25px;
+    place-items: center;
+}
+img{
+    width: 100%;
+    height: 200px;
+    margin: 0.5rem;
+    object-fit: cover;
+}
+.picture figure{
+    text-align: center;
+    font-weight: bolder;
+}
+/*footer*/
+footer {
+    background-color: rgb(165, 66, 33);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+#lastModified {
+    color: #fff;
+}
