@@ -20,6 +20,9 @@ main {
     padding: 10px;
 }
 /*body*/
+body{
+    --body-font: 'Roboto', Arial, Helvetica, sans-serif;
+}
 
 /*Encabezado*/
 header{
