@@ -14,11 +14,33 @@
     <header>
         <h1>Cali - Colombia</h1>
     </header>
-    <section>
-        <picture>
-            <source srcset="images/cali-400.webp" media="(max-width: 600px)" type="image/webp">
-            <source srcset="images/cali-800.webp">
-        </picture>
-    </section>
+    <Main>
+        <section>
+            <picture>
+                <source srcset="images/cali400.webp" media="(max-width: 600px)" type="image/webp">
+                <source srcset="images/cali800.webp" media="(max-width: 1200px)" type="image/webp">
+                <source srcset="images/cali1200.webp" type="image/webp">
+                <img src="images/cali800.webp" alt="Cali.Colombia">
+            </picture>
+        </section>
+        <section>
+            <h2>Data</h2>
+            <p><strong>Country:</strong> Colombia</p>
+            <p><strong>Department:</strong> Valle del Cauca</p>
+            <p><strong>City:</strong> Cali</p>
+            <p><strong>Area:</strong> 619 km²</p>
+            <p><strong>Population:</strong>2 294 653</p>
+            <p><strong>Languages:</strong> Spanish</p>
+            <p><strong>Currency:</strong> Colombian Peso (COP)</p>
+            <p><strong>Time Zone:</strong> UTC-5</p>
+            <p><strong>Calling Code:</strong> +57</p>
+        </section>
+    </Main>
+    <footer>
+        <p>
+            © <span id="currentyear"></span> 🍀Barklin Daniel Gonzalez🍀Ecuador
+        </p>
+        <p id="lastModified"></p>
+    </footer>
 </body>
 </html>
