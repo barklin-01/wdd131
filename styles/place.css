@@ -75,11 +75,6 @@ h2{
     justify-self: end;
     font-weight: bold;
 }
-.data p strong,
-.clima p strong {
-    justify-self: end;
-    font-weight: bold;
-}
 .data p span,
 .clima p span {
     justify-self:start;
