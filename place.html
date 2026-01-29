@@ -7,6 +7,7 @@
     <meta name="author" content="Barklin Gonzalez">
     <title>WDD 131-Cali-Barklin Gonzalez</title>
     <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place-large.css">
     <script src="scripts/place.js" defer></script>
 
 </head>
@@ -14,7 +15,7 @@
     <header>
         <h1>Cali - Colombia</h1>
     </header>
-    <Main>
+    <main>
         <section>
             <picture>
                 <source srcset="images/cali400.webp" media="(max-width: 600px)" type="image/webp">
@@ -35,7 +36,20 @@
             <p><strong>Time Zone:</strong> UTC-5</p>
             <p><strong>Calling Code:</strong> +57</p>
         </section>
-    </Main>
+
+        <section class="clima">
+            <h3 class="title">
+                <img src="images/clima.svg" alt="Weather icon" class="icon">
+                Weather</h3>
+            <div class="clima-info">
+                <p><strong>Temperature:</strong> <span id="temp">8</span>°C</p>
+                <p><strong>Condition:</strong> Partly Cloudy</p>
+                <p><strong>Wind:</strong> <span id="wind">10</span>km/h</p>
+                <p><strong>Wind Chill:</strong> <span id="windchill">--</span></p>                
+            </div>
+
+        </section>
+    </main>
     <footer>
         <p>
             © <span id="currentyear"></span> 🍀Barklin Daniel Gonzalez🍀Ecuador
