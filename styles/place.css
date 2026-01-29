@@ -1,3 +1,12 @@
+/*Variables*/
+:root {
+    --heading-font: 'Roboto', "Times New Roman", "Georgia", serif;
+    --backgroundcolor: #edf8fc;
+    --color1: #f53131;
+    --color2:#241e96;
+    --color3:#078c16;
+}
+
 /*reset general*/
 *,
 *::after,
@@ -6,22 +15,72 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-/* Letra y colores del body*/
-bofy{
-    
-}
-
-/*Ancho de la pagina*/
+/*Ancho de la Pagina*/
 header,
-footer {
+footer{
     width: 100%;
     padding: 10px;
     text-align: center;
+    background-color: var(--color3);
+    color: #fff; 
 }
 
-main {
-    max-width: 800px;
+/* Letra y colores del body*/
+body {
+    font-family: var(--heading-font);
+    line-height: 1.6;
+    background-color: var(--backgroundcolor);
     padding: 10px;
+}
+/*main*/
+main{
     text-align: center;
+
+}
+/*Imagen Hero*/
+picture img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    background-color: var(--color1);
+    padding-block-end: 20px;
+    padding-block-start: 10px;
+}
+
+h2{
+    font-size: 2rem;
+    text-align: center;
+    color: var(--color2);
+}
+.icon{
+    width: 15%;
+    height: auto;
+    margin: 10px;
+}
+.clima{
+    margin-bottom: 10px;
+}
+/*informacion*/
+.data p,
+.clima p{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-size: 1.1rem;
+    column-gap: 8px;
+}
+
+/* Texto de la izquierda */
+.data p strong,
+.clima p strong {
+    justify-self: end;
+    font-weight: bold;
+}
+.data p strong,
+.clima p strong {
+    justify-self: end;
+    font-weight: bold;
+}
+.data p span,
+.clima p span {
+    justify-self:start;
 }
