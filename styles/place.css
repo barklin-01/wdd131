@@ -1,0 +1,27 @@
+/*reset general*/
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Letra y colores del body*/
+bofy{
+    
+}
+
+/*Ancho de la pagina*/
+header,
+footer {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+}
+
+main {
+    max-width: 800px;
+    padding: 10px;
+    text-align: center;
+}
