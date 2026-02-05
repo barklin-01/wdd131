@@ -111,19 +111,20 @@ function displayTemples(temples) {
         img.loading = "lazy";
 
         const pLocation = document.createElement("p");
-        pLocation.textContent = `Location: ${temple.location}`;
+        pLocation.innerHTML = `<span class="label">Location:</span> ${temple.location}`;
 
         const pDedicated = document.createElement("p");
-        pDedicated.textContent = `Dedicated: ${temple.dedicated}`;
+        pDedicated.innerHTML = `<span class="label">Dedicated:</span> ${temple.dedicated}`;
 
         const pArea = document.createElement("p");
-        pArea.textContent = `Area: ${temple.area} sq ft`;
+        pArea.innerHTML = `<span class="label">Area:</span> ${temple.area} sq ft`;
+
 
         article.appendChild(h3);
-        article.appendChild(img);
         article.appendChild(pLocation);
         article.appendChild(pDedicated);
         article.appendChild(pArea);
+        article.appendChild(img);
 
         templesContainer.appendChild(article);
     });

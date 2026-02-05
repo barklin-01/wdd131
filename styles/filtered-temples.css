@@ -16,7 +16,7 @@ footer {
 }
 
 main {
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 10px;
 }
@@ -80,33 +80,44 @@ h1 {
     margin: 20px 0;
 }
 
-.picture {
+#temples{
     display: grid;
     grid-template-columns: 1fr;
-    gap: 20px;
-    place-items: center;
-}
+    gap: 30px;
 
-.picture img {
+}
+#temples article{
+    background-color: #f8ece4;
+    border: 1px solid #060606;
+    overflow: hidden;
+    padding: 20px;
+}
+#temples img{
     width: 100%;
     height: auto;
-    margin: 0.5rem;
     object-fit: cover;
-    border-radius: 4px;
+    margin: 10px 0 0 0;
 }
-
-.picture figure {
+#temples h3{
+    font-size: 1.4rem;
     text-align: center;
-    font-weight: bolder;
+    margin: 0 0 15px 0;
 }
-
+#temples p{
+    text-align: center;
+    font-size: 1rem;
+}
+#temples .label {
+    color: #b53910;
+    font-weight: bold;
+}
 /*footer*/
 footer {
     background-color: rgb(165, 66, 33);
     color: #fff;
     padding: 20px;
     text-align: center;
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 #lastModified {
@@ -171,21 +182,21 @@ nav.open {
     }
 
     /* Grid de imágenes */
-    .picture {
+    #temples {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 20px;
     }
 
-    .picture img {
+    #temples img {
         width: 100%;
         height: 200px;
         object-fit: cover;
         transition: transform 0.3s ease-in-out;
     }
-
     /* Efecto hover */
-    .picture img:hover {
-        transform: scale(1.05);
+    #temples img:hover {
+        transform: scale(1.01);
+        transition: transform 0.3s ease;
     }
 }
