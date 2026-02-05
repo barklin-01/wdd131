@@ -20,9 +20,7 @@ main {
     margin: 0 auto;
     padding: 10px;
 }
-body {
-    font-family: var(--body-font);
-}
+
 /*Encabezado*/
 header {
     display: flex;
