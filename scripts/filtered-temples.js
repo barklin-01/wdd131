@@ -1,8 +1,8 @@
-//Fecha de Modificacion
+// Fecha de Modificacion
 document.getElementById("currentyear").textContent = new Date().getFullYear();
 document.getElementById("lastModified").textContent = `Last Modification: ${document.lastModified}`;
 
-//  Butoon de Hamburgesa//
+// Botón de Hamburguesa
 const menuButton = document.querySelector('#menu-button');
 const nav = document.querySelector('nav');
 
@@ -10,12 +10,13 @@ menuButton.addEventListener('click', () => {
     nav.classList.toggle('open');
 
     if (nav.classList.contains('open')) {
-        menuButton.innerHTML = '&#10005;'; // X
+        menuButton.innerHTML = '&#10005;'; 
     } else {
-        menuButton.innerHTML = '&#9776;'; // ☰
+        menuButton.innerHTML = '&#9776;'; 
     }
 });
-//imagenes del templo//
+
+// Imagenes del templo
 const temples = [
     {
         templeName: "Aba Nigeria",
@@ -69,7 +70,7 @@ const temples = [
         templeName: "Mexico City Mexico",
         location: "Mexico City, Mexico",
         dedicated: "1983, December, 2",
-        area: "116642",
+        area: 116642,
         imageUrl:
             "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
     },
@@ -77,38 +78,36 @@ const temples = [
         templeName: "Guayaquil Ecuador",
         location: "Guayaquil Ecuador",
         dedicated: "1999, August, 1",
-        area: "45000",
+        area: 45000,
         imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/_temp/058-Guayaquil-Ecuador-Temple.jpg"
     },
     {
         templeName: "Quito Ecuador",
         location: "Quito Ecuador",
         dedicated: "2022, November, 20",
-        area: "36780",
+        area: 36780,
         imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/quito-ecuador-temple/quito-ecuador-temple-31202-main.jpg"
     },
     {
         templeName: "Bogota Colombia",
         location: "Bogota Colombia",
         dedicated: "1999, April, 22",
-        area: "53500",
-        imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/bogota-colombia-temple/bogota-colombia-temple-7733-main.jpg" 
+        area: 53500,
+        imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/bogota-colombia-temple/bogota-colombia-temple-7733-main.jpg"
     }
 ];
-//mostrar templos//
+
+// Contenedor
 const templesContainer = document.querySelector("#temples");
 
-function displayTemples(temples) {
-    temples.forEach(temple => {
+// Mostrar templos
+function displayTemples(list) {
+    templesContainer.innerHTML = '';
+    list.forEach(temple => {
         const article = document.createElement("article");
 
         const h3 = document.createElement("h3");
         h3.textContent = temple.templeName;
-
-        const img = document.createElement("img");
-        img.src = temple.imageUrl;
-        img.alt = temple.templeName;
-        img.loading = "lazy";
 
         const pLocation = document.createElement("p");
         pLocation.innerHTML = `<span class="label">Location:</span> ${temple.location}`;
@@ -118,6 +117,11 @@ function displayTemples(temples) {
 
         const pArea = document.createElement("p");
         pArea.innerHTML = `<span class="label">Area:</span> ${temple.area} sq ft`;
+
+        const img = document.createElement("img");
+        img.src = temple.imageUrl;
+        img.alt = temple.templeName;
+        img.loading = "lazy";
 
 
         article.appendChild(h3);
@@ -129,4 +133,37 @@ function displayTemples(temples) {
         templesContainer.appendChild(article);
     });
 }
+
+// Mostrar todos al inicio
 displayTemples(temples);
+
+// Filtrado por menú
+function filterTemples(filterType) {
+    let filtered = [];
+
+    switch (filterType) {
+        case 'old': 
+            filtered = temples.filter(t => new Date(t.dedicated).getFullYear() < 1900);
+            break;
+        case 'new': 
+            filtered = temples.filter(t => new Date(t.dedicated).getFullYear() > 2000);
+            break;
+        case 'large': 
+            filtered = temples.filter(t => Number(t.area) > 90000);
+            break;
+        case 'small':
+            filtered = temples.filter(t => Number(t.area) < 10000);
+            break;
+        case 'all':
+        default:
+            filtered = temples;
+    }
+
+    displayTemples(filtered);
+}
+
+document.querySelector('#home').addEventListener('click', e => { e.preventDefault(); filterTemples('all'); });
+document.querySelector('#old').addEventListener('click', e => { e.preventDefault(); filterTemples('old'); });
+document.querySelector('#new').addEventListener('click', e => { e.preventDefault(); filterTemples('new'); });
+document.querySelector('#large').addEventListener('click', e => { e.preventDefault(); filterTemples('large'); });
+document.querySelector('#small').addEventListener('click', e => { e.preventDefault(); filterTemples('small'); });
