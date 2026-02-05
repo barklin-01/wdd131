@@ -20,7 +20,9 @@ main {
     margin: 0 auto;
     padding: 10px;
 }
-
+body {
+    font-family: var(--body-font);
+}
 /*Encabezado*/
 header {
     display: flex;
@@ -191,7 +193,6 @@ nav.open {
     }
     /* Efecto hover */
     #temples img:hover {
-        transform: scale(1.01);
         transition: transform 0.3s ease;
     }
 }
