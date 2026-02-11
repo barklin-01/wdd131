@@ -1,0 +1,74 @@
+/*Variable*/
+:root {
+    --heading-font:"Amarante", serif;
+    --body-font:"Montserrat", sans-serif; 
+    --color1: #fdf0f0;
+    --color2: #fb8686;
+    --color3: #ffffff;
+}
+
+/*reset general*/
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*body*/
+body {
+    font-family: var(--body-font);
+    background-color: var(--color1);
+}
+/*Ancho de la pagina*/
+header,
+main,
+footer {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+/*Header*/
+header, 
+footer{
+    background-color: var(--color2);
+    color: var(--color3);
+}
+header{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 3px;
+    margin-bottom: 20px;
+}
+header img{
+    width: 120px;
+    border-radius: 5px;
+    margin-left: 5px;
+}
+h1,
+h2{
+    font-family: var(--heading-font);
+    margin: 10px 0 10px 0;
+}
+
+ul{
+    margin-left: 30px;
+    padding-bottom: 10px;
+}
+#diseño{
+    background-color: #ffffff;
+    border: 2px solid;
+    padding: 10px;
+    text-align: center;
+}
+#diseño figure{
+    margin-bottom: 30px;
+}
+footer{
+    height: 50px;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
