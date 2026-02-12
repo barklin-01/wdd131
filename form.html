@@ -11,8 +11,56 @@
 </head>
 
 <body>
-    <header></header>
-    <main></main>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+
+    <main>
+        <form id="reviewForm" action="review.html" method="get" onsubmit="incrementCounter()">
+            <label for="product"> Product Name</label>
+            <select id="product" name="product"required>
+            <option value="" disabled selected>Select a Product</option>
+            </select>
+
+            <label>Overall Rating</label>
+            <div class="stars">
+                <input type="radio" id="fivestar" name="stars" value="5" required><label for="fivestar"></label>
+                <input type="radio" id="fourstar" name="stars" value="4" required><label for="fourstar"></label>
+                <input type="radio" id="threestar" name="stars" value="3" required><label for="threestar"></label>
+                <input type="radio" id="twostar" name="stars" value="2" required><label for="twostar"></label>
+                <input type="radio" id="onestar" name="stars" value="1" required><label for="onestar"></label>
+            </div>
+
+            <label for="installDate">Date of Installation</label>
+            <input type="date" id="installDate" name="installDate" required>
+
+            <p>Which features did you find useful in the product (Check all the apply)</p>
+            <div class="opcion">
+                <label>
+                    <input type="checkbox" name="purpose" id="durability" value="Durability" >
+                    Durability
+                </label>
+                <label>
+                    <input type="checkbox" name="purpose" id="use" value="Ease of use" >
+                    Ease of Use
+                </label>
+                <label>
+                    <input type="checkbox" name="purpose" id="performance" value="Performance" >
+                    Performance
+                </label>
+                <label>
+                    <input type="checkbox" name="purpose" id="design" value="Design" >
+                    Design
+                </label>
+            </div>
+            <label for="review">Written Review (Optional)</label>
+            <textarea id="review" name="review" rows="4"></textarea>
+            <label for="username">Name (Optional)</label>
+            <input type="text" id="username" name="username">
+
+            <input type="submit" value="Submit Review">
+        </form>
+    </main>
     <footer>
         <p>
             © <span id="currentyear"></span> 🍀Barklin Daniel Gonzalez🍀Ecuador
