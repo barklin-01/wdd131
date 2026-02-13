@@ -1,3 +1,42 @@
+/*Variable*/
+:root {
+    --heading-font: 'Roboto', "Times New Roman", "Georgia", serif;
+    --body-font: 'Roboto', Arial, Helvetica, sans-serif;
+    --color1: #050505;
+    --color2: #e1f1f8;
+    --color3: #254863;;
+    --color4: #ffd700;
+    --color5: #000;
+}
+/*reset general*/
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*Ancho de la pagina*/
+header,
+footer {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+}
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 10px;
+}
+/*body*/
+body {
+    font-family: var(--body-font);
+    color: var(--color1);
+    background-color: var(--color2);
+    border: 3px solid ;
+}
+
+
 /* stars */
 input[type="radio"] {
     display: none;
@@ -12,7 +51,7 @@ input[type="radio"] {
 }
 
 .stars>label {
-    color: gold;
+    color: var(--color4);
     width: 30px;
     height: 30px;
     font-size: 2rem;
@@ -33,4 +72,17 @@ input[type="radio"] {
 
 .stars input:checked~label::before {
     content: "\2605";
+}
+
+/*footer*/
+footer {
+    background-color:var(--color3);
+    color: var(--color2);
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+#lastModified {
+    color: var(--color4);
 }
