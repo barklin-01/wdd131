@@ -18,7 +18,7 @@
 /*body*/
 body {
     font-family: var(--body-font);
-    background-color: var(--color1);
+    background-color: var(--color3);
 }
 /*Ancho de la pagina*/
 header,
@@ -29,47 +29,188 @@ footer {
     margin: 0 auto;
 }
 /*Header*/
-header, 
-footer{
+
+header{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    padding: 10px;
+    gap: 20px;
     background-color: var(--color2);
     color: var(--color3);
 }
-header{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    padding: 3px;
-    margin-bottom: 20px;
-}
+/*logo*/
 header img{
-    width: 120px;
+    width: 180px;
     border-radius: 5px;
     margin-left: 5px;
-    background-color: rgb(93, 0, 255);
 }
-h1,
-h2{
-    font-family: var(--heading-font);
-    margin: 10px 0 10px 0;
+/*links*/
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 10px;
 }
 
-ul{
-    margin-left: 30px;
-    padding-bottom: 10px;
+nav ul li a {
+    color: var(--color3);
+    text-decoration: none;
+    font-weight: bold;
+    border: 2px solid ;
+    padding: 10px 20px ;
 }
-#diseño{
-    background-color: #ffffff;
-    border: 2px solid;
-    padding: 10px;
+nav ul li a:hover {
+    background-color: var(--color3);
+    color: var(--color2);
+}
+nav {
+    justify-self: end;
+    margin-right: 10px;
+}
+/*Backround*/
+.hero {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+.hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 1;
+    
+}
+.title-1 {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    padding: 16px 0;
     text-align: center;
+    background-color: #fdf2f2;
+    color: #050505;
+    font-family: var(--heading-font);
+    font-size: 3rem;
+    z-index: 10;
+    margin: 0;
+    opacity: 0.7;
 }
-#diseño figure{
-    margin-bottom: 30px;
+/*Formulario*/
+.hero .suscribete{
+    position: absolute;
+    top: 20%;
+    left: 2%;
+    background: rgba(249, 253, 255, 0.427);
+    padding: 25px 25px;
+    max-width: 300px;
+    height: auto;
+    backdrop-filter: blur(8px);
+    z-index: 80;
+    border: 3px solid var(--color2);
 }
+/* Títulos y párrafos */
+.t2 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    position: relative;
+    bottom: 10px;
+    right: 40px;
+    background-color: #fa3434;
+    padding: 10px;
+    color: #fff;
+}
+
+.pt {
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+    line-height: 1.5;
+    color: #000;
+}
+
+/* Formulario */
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.formulario label {
+    text-align: left;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.formulario input {
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid;
+    outline: none;
+    font-size: 0.95rem;
+}
+
+/* Botón */
+.button {
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    background: #fa3434;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    background: rgba(226, 3, 3, 0.786);
+    transform: translateY(-2px);
+}
+
+/*Descubrenos*/
+.hero .about{
+    position: absolute;
+    background: rgba(249, 253, 255, 0.427);
+    padding: 20px 10px;
+    max-width: 300px;
+    height: auto;
+    backdrop-filter: blur(8px);
+    z-index: 80;
+    border: 3px solid var(--color2);
+    bottom: 70px;
+    right: 50px;
+}
+.aboutbutton {
+    display: block;
+    width: 70%;
+    background:#fa3434;
+    margin: 20px auto 0 auto;
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    font-size: 0.95rem;
+    height: 50px;
+}
+.aboutbutton:hover {
+    background: rgba(226, 3, 3, 0.786);
+    transform: translateY(-2px);
+}
+.about .pt{
+    font-weight: 500;
+}
+
+/*Footer*/
 footer{
     height: 50px;
     font-size: 1.2rem;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: var(--color2);
+    color: var(--color3);
 }

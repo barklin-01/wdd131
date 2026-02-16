@@ -20,10 +20,9 @@
 <body>
     <header>
         <img src="imgs/logo.jpg" alt="Logo of the store">        
-        <h1>Site Plan</h1>
         <nav>
             <ul>
-                <li><a href="home.html">Home</a></li>
+                <li><a href="siteplan.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="store.html">Store</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
@@ -32,11 +31,46 @@
     </header>
 
     <main>
-        
+        <div class="hero">
+            <section>
+                <picture>
+                    <source srcset="imgs/header1.webp" media="(max-width: 600px)" type="image/webp">
+                    <source srcset="imgs/header3.webp" media="(max-width: 1200)" type="image/webp">
+                    <source srcset="imgs/header2.webp" type="image/webp">
+                    <img src="imgs/header3.webp" alt="Fondo de pantalla de la pagina">
+                </picture>
+                <h1 class="title-1" >Bordados Sayde</h1>
+            </section>
+            <section class="suscribete">
+                <h2 class="t2">Subscribe to our page</h2>
+                <p class="pt">Receive exclusive offers, news and new products in your email or cellphone number.</p>
+
+                <form class="formulario">
+                    <label for="name">Name:</label>
+                    <input type="text" name="name" id="name" required>
+
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email">
+
+                    <label for="number">Phone Number</label>
+                    <input type="tel" id="number" name="number" pattern="[0-9+\-\s]{7,20}">
+
+                    <button type="submit" class="button">Subscribe</button>
+                </form>
+            </section>
+            <section class="about">
+                <h2 class="t2">We create your Kichwa Legacy</h2>
+                <p class="pt">Unique designs, elegant colors, one-of-a-kind styles just for you</p>
+                <a class="aboutbutton" href="about.html">Discover us!</a>
+            </section>            
+        </div>
+
     </main>
 
     <footer>
-        <p>🍀Barklin Daniel Gonzalez🍀Ecuador</p>
+        <p>
+            © <span id="currentyear"></span> 🍀Barklin Daniel Gonzalez🍀Ecuador
+        </p>
     </footer>
 
 </body>
