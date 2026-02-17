@@ -81,7 +81,7 @@ nav {
     z-index: 1;
     
 }
-.title-1 {
+.hero-text {
     position: absolute;
     top: 20px;
     left: 50%;
@@ -92,10 +92,12 @@ nav {
     background-color: #fdf2f2;
     color: #050505;
     font-family: var(--heading-font);
-    font-size: 3rem;
     z-index: 10;
     margin: 0;
     opacity: 0.7;
+}
+.hero-text .title-1{
+    font-size: 3rem;
 }
 /*Formulario*/
 .hero .suscribete{
@@ -214,3 +216,4 @@ footer{
     background-color: var(--color2);
     color: var(--color3);
 }
+/*--------------------------------------------------------------------*/
