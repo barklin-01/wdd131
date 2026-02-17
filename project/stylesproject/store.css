@@ -23,3 +23,8 @@ main{
 .store img:hover {
     transform: scale(1.05);
 }
+h1{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
