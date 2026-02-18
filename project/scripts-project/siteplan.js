@@ -1,14 +1,18 @@
-//Fecha de Modificacion
-document.getElementById("currentyear").textContent = new Date().getFullYear();
-document.getElementById("lastModified").textContent = `Last Modification: ${document.lastModified}`;
-//boton de hamburgesa//
-const menuButton = document.getElementById("menu-button");
-const nav = document.querySelector("nav");
+document.addEventListener("DOMContentLoaded", () => {
+    // Fecha de modificación
+    document.getElementById("currentyear").textContent = new Date().getFullYear();
+    const lastModifiedElem = document.getElementById("lastModified");
+    if (lastModifiedElem) {
+        lastModifiedElem.textContent = `Last Modification: ${document.lastModified}`;
+    }
 
-menuButton.addEventListener("click", () => {
-    if (nav.style.display === "block") {
-        nav.style.display = "none";
-    } else {
-        nav.style.display = "block";
+    // Botón de hamburguesa
+    const menuButton = document.getElementById("menu-button");
+    const nav = document.querySelector("nav");
+
+    if (menuButton && nav) {
+        menuButton.addEventListener("click", () => {
+            nav.classList.toggle("nav-open");
+        });
     }
 });

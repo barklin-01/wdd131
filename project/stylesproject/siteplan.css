@@ -207,17 +207,17 @@ nav {
 }
 
 /*Footer*/
-footer{
-    height: 50px;
+footer {
     font-size: 1.2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     background-color: var(--color2);
     color: var(--color3);
+    padding: 10px 0;
+    text-align: center;
+    display: block;
 }
-#lastModified {
 
+footer p {
+    margin: 5px 0;
 }
 #menu-button {
     display: none;
@@ -272,6 +272,9 @@ footer{
         padding: 10px 0;
         border: none;
         font-size: 1.5rem;
+    }
+    nav.nav-open {
+        display: block;
     }
 /*-------------------------suscribete--------------*/
     .hero .suscribete {
