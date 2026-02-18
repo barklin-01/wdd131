@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // ------------------- Fecha de modificación -------------------
+    // ------------------- Fecha de modificación -------------------// 
     const currentYearElem = document.getElementById("currentyear");
     const lastModifiedElem = document.getElementById("lastModified");
 
@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
         lastModifiedElem.textContent = `Last Modification: ${document.lastModified}`;
     }
 
-    // ------------------- Menú hamburguesa -------------------
+    // ------------------- Menú hamburguesa -------------------//
     const menuButton = document.getElementById("menu-button");
     const nav = document.querySelector("nav");
 
@@ -20,28 +20,28 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // ------------------- Validación del formulario -------------------
+    // ------------------- Validación del formulario -------------------//
     const formulario = document.querySelector(".formulario");
     if (formulario) {
         formulario.addEventListener("submit", validarFormulario);
     }
 });
 
-// ------------------- Función de validación y ramificación condicional -------------------
+// ------------------- Función de validación y ramificación condicional -------------------//
 function validarFormulario(event) {
-    event.preventDefault(); // Evita que se envíe el formulario automáticamente
+    event.preventDefault(); // Evita que se envíe el formulario automáticamente//
 
     const name = document.getElementById("name").value.trim();
     const email = document.getElementById("email").value.trim();
     const number = document.getElementById("number").value.trim();
 
-    // Validación básica
+    // Validación básica//
     if (name === "" || email === "" || number === "") {
         alert("Por favor, completa todos los campos antes de suscribirte.");
         return;
     }
 
-    // Ramificación condicional según tipo de correo
+    // Ramificación condicional según tipo de correo//
     if (email.endsWith("@gmail.com")) {
         alert(`¡Gracias ${name}! Tu suscripción con Gmail ha sido registrada. 🎉`);
     } else if (email.endsWith("@yahoo.com")) {
@@ -50,11 +50,11 @@ function validarFormulario(event) {
         alert(`¡Gracias ${name}! Te has suscrito correctamente a Bordados Sayde.`);
     }
 
-    // Limpiar formulario
+    // Limpiar formulario//
     event.target.reset();
 }
 
-// objeto JavaScript para un producto
+// objeto JavaScript para un producto//
 const productos = [
     { nombre: "Modelo 1", imagen: "modelo1.jpg", tallas: ["S", "M", "L", "XL"], precio: 250, disponible: true },
     { nombre: "Modelo 2", imagen: "modelo2.jpg", tallas: ["S", "M", "L", "XL"], precio: 150, disponible: true },
