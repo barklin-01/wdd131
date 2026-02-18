@@ -9,10 +9,17 @@ main{
     margin: 0.5rem;
     object-fit: cover;
     border-radius: 4px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
 }
 .store figure {
     text-align: center;
     font-weight: bolder;
+    border: 2px solid;
+    background-color: rgb(255, 248, 239);
+    padding: 15px;
+    margin-bottom: 10px;
 }
 .store {
     display: grid;
